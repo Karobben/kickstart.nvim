@@ -36,7 +36,7 @@ lvim.builtin.which_key.mappings["r"] = {
     -- add repl for other langs
 }
 -- vim.cmd [[let g:slime_target = "toggleterm.nvim"]]
--- vim.cmd [[let g:slime_target = "tmux"]]
+vim.cmd [[let g:slime_target = "tmux"]]
 -- " NERD Tree
 vim.cmd [[map nn :NERDTreeToggle]]
 -- NCM2
