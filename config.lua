@@ -38,7 +38,7 @@ lvim.builtin.which_key.mappings["r"] = {
 -- vim.cmd [[let g:slime_target = "toggleterm.nvim"]]
 vim.cmd [[let g:slime_target = "tmux"]]
 -- " NERD Tree
-vim.cmd [[map nn :NERDTreeToggle]]
+vim.cmd [[map tt :NERDTreeToggle]]
 -- NCM2
 vim.cmd [[autocmd BufEnter * call ncm2#enable_for_buffer() ]] -- To enable ncm2 for all buffers.
 vim.cmd [[set completeopt=noinsert,menuone,noselect ]] -- help Ncm2PopupOpen for more information.
