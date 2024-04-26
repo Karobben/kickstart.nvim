@@ -6,7 +6,7 @@
 
 -- fot reple the codes
 lvim.plugins = {
-  { 'jalvesaq/Nvim-R', branch = 'stable' },
+  { 'jalvesaq/Nvim-R'},
   { 'ncm2/ncm2'},
   { 'roxma/nvim-yarp'},
   { 'gaalcaras/ncm-R'},
