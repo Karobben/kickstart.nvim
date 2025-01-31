@@ -15,6 +15,7 @@ lvim.plugins = {
   { 'patstockwell/vim-monokai-tasty'},
   { 'itchyny/lightline.vim'},
   { 'github/copilot.vim'},
+  { 'xuhdev/vim-latex-live-preview'},
   {
    "jpalardy/vim-slime",
    config = function()
