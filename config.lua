@@ -14,6 +14,7 @@ lvim.plugins = {
   { 'Raimondi/delimitMate'},
   { 'patstockwell/vim-monokai-tasty'},
   { 'itchyny/lightline.vim'},
+  { 'github/copilot.vim'},
   {
    "jpalardy/vim-slime",
    config = function()
