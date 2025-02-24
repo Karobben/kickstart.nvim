@@ -6,15 +6,16 @@
 
 -- fot reple the codes
 lvim.plugins = {
-  { 'jalvesaq/Nvim-R'},
-  { 'ncm2/ncm2'},
-  { 'roxma/nvim-yarp'},
   { 'gaalcaras/ncm-R'},
-  { 'preservim/nerdtree'},
-  { 'Raimondi/delimitMate'},
-  { 'patstockwell/vim-monokai-tasty'},
-  { 'itchyny/lightline.vim'},
   { 'github/copilot.vim'},
+  { 'itchyny/lightline.vim'},
+  { 'jalvesaq/Nvim-R'},
+  { "lervag/vimtex"},
+  { 'ncm2/ncm2'},
+  { 'preservim/nerdtree'},
+  { 'patstockwell/vim-monokai-tasty'},
+  { 'roxma/nvim-yarp'},
+  { 'Raimondi/delimitMate'},
   { 'xuhdev/vim-latex-live-preview'},
   {
    "jpalardy/vim-slime",
@@ -37,6 +38,19 @@ lvim.builtin.which_key.mappings["r"] = {
     },
     -- add repl for other langs
 }
+
+-- set for vimtex
+vim.g.vimtex_view_method = "zathura"
+vim.g.maplocalleader = ","
+-- From: https://github.com/lervag/vimtex/blob/master/doc/vimtex.txt#L4671-L4713
+vim.o.foldmethod = "expr"
+vim.o.foldexpr="vimtex#fold#level(v:lnum)"
+vim.o.foldtext="vimtex#fold#text()"
+-- I like to see at least the content of the sections upon opening
+vim.o.foldlevel=2
+
+
+
 -- vim.cmd [[let g:slime_target = "toggleterm.nvim"]]
 vim.cmd [[let g:slime_target = "tmux"]]
 -- " NERD Tree
