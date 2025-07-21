@@ -17,16 +17,6 @@ lvim.plugins = {
   { 'roxma/nvim-yarp'},
   { 'Raimondi/delimitMate'},
   { 'xuhdev/vim-latex-live-preview'},
-  { "RRethy/vim-illuminate",
-    config = function()
-      require("illuminate").configure({
-        providers = {
-          "lsp",
-          "regex", -- don't use 'treesitter' to avoid crash
-        },
-      })
-    end,
-  },
   {
    "jpalardy/vim-slime",
    config = function()
@@ -40,14 +30,12 @@ lvim.plugins = {
   }
 }
 
-
-
 -- set for vimtex
 vim.g.vimtex_view_method = "zathura"
 vim.g.maplocalleader = ","
 -- From: https://github.com/lervag/vimtex/blob/master/doc/vimtex.txt#L4671-L4713
-
--- vim.o.foldexpr="vimtex#fold#level(v:lnum)"
+vim.o.foldmethod = "expr"
+vim.o.foldexpr="vimtex#fold#level(v:lnum)"
 -- vim.o.foldtext="vimtex#fold#text()"
 -- I like to see at least the content of the sections upon opening
 -- vim.o.foldlevel=2
@@ -68,11 +56,6 @@ vim.cmd [[ set spell spelllang=en_us ]]
 -- text wrap
 vim.wo.wrap = true
 -- code fold
-vim.o.foldmethod = "expr"
-vim.o.foldexpr="getline(v:lnum)=~'^\\s*$'?0:1"
--- vim.o.foldexpr="vimtex#fold#level(v:lnum)"
--- vim.o.foldtext="vimtex#fold#text()"
--- -- I like to see at least the content of the sections upon opening
--- vim.o.foldlevel=2
-
+vim.opt.foldmethod = "expr" -- default is "normal"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()" -- default is ""
 vim.opt.foldenable = true -- if this option is true and fold method option is other than normal, every time a document is opened everything will be folded.
